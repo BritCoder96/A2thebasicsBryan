@@ -3,7 +3,7 @@ var path = require('path');
 var app = express();
 
 // Define the port to run on
-app.set('port', 8080);
+app.set('port', process.env.PORT || 8080);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
